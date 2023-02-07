@@ -4,7 +4,7 @@
     justify-content: space-between
     z-index: 100
     align-items: center
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2)
     padding: 20px
 
 .NavContainer
@@ -53,9 +53,10 @@
 
 @media screen and (max-width: 1250px) 
     .NavBar
-        display: block
+        display: flex
         padding: 10px
         height: 100px
+        flex-direction: column
 
     .NavContainer
         text-align: center
@@ -74,6 +75,8 @@
     
     .SearchBar
         width: 100%
+        margin-left: auto
+        margin-right: auto
     
     .NavContainerLink
         display: none
