@@ -4,13 +4,76 @@
     justify-content: space-between
     z-index: 100
     align-items: center
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2)
+    padding: 20px
+
+.NavContainer
+    flex: 1
+
+.Bars
+    display: none
+    @media screen and (max-width: 1250px)
+        display: flex
+        width: 30px
+        height: 30px
+        justify-content: flex-end
+        position: absolute
+        right: 10px
 
 .NavContainerLink
+    flex: 1
     display: flex
     gap: 3px
-
+    margin-right: 0
+    float: right
+    justify-content: flex-end
 
 .NavContainerLink a
+    padding: 10px
     color: inherit
     text-decoration: none
+
+.NavContainerSearch
+    flex: 1
+    max-width: 500px
+
+.FormSearch
+    display: inline-flex
+    justify-content: center
+    width: 100%
+
+.SearchBar
+    width: 100%
+    border-radius: .7rem
+    border-width: 1px
+    height: 2rem
+    padding: 0 0.6rem
+    outline: 0
+    appearance: none
+
+@media screen and (max-width: 1250px) 
+    .NavBar
+        display: block
+        padding: 10px
+        height: 100px
+
+    .NavContainer
+        text-align: center
+        display: flex
+        flex-direction: column
+
+    .NavContainerSearch
+        display: flex
+        width: 100%
     
+    .NavContainerLink
+        display: flex
+        flex-direction: column
+        text-align: center
+        width: 100%
+    
+    .SearchBar
+        width: 100%
+    
+    .NavContainerLink
+        display: none

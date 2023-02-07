@@ -1,16 +1,16 @@
 import React from 'react'
 import './css/Nav.sass'
+import { FaBars } from 'react-icons/fa';
 
 function Nav() {
   return (
     <div className='NavBar'>
       <div className='NavContainer'>
         <h2>MetraCL</h2>
+        <FaBars className='Bars'/>
       </div>
-      <div className='NavContainer'>
-        <form className='FormSearch'>
-          <input type="text" id='txt' placeholder='HOLA'/>
-        </form>
+      <div className='NavContainerSearch'>
+          <input type="text" id='txt' className='SearchBar' placeholder='HOLA'/>
       </div>
       <div className='NavContainerLink'>
         <a href='www.google.cl'>Home</a>
