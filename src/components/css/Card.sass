@@ -1,0 +1,33 @@
+.Container
+    display: grid
+    gap: 1rem
+    grid-auto-rows: 22rem
+    grid-auto-flow: dense
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr))
+
+@media screen and (min-width: 90rem)
+    .Container
+        grid-template-columns: repeat(5, 1fr)
+
+.Card
+    background-color: #0d87eb
+    padding: 15px
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.Img
+    width: 200px
+    height: 100px
+
+.Container2
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    gap: 10px
+    margin: 10px
+.Container3
+    display: grid
+    gap: 1rem
+    grid-auto-rows: 22rem
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr))
