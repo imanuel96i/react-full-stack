@@ -1,4 +1,5 @@
 import React from 'react'
+import './css/Nav.sass'
 
 function Nav() {
   return (
@@ -7,7 +8,9 @@ function Nav() {
         <h2>MetraCL</h2>
       </div>
       <div className='NavContainer'>
-        <input type="text" id='txt' placeholder='HOLA'/>
+        <form className='FormSearch'>
+          <input type="text" id='txt' placeholder='HOLA'/>
+        </form>
       </div>
       <div className='NavContainerLink'>
         <a href='www.google.cl'>Home</a>

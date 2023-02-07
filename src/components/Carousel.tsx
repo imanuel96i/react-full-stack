@@ -1,4 +1,5 @@
 import React from 'react'
+import './css/Carousel.sass'
 
 function Carousel() {
   return (
