@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./css/Carousel.sass";
+import veranoApple from "./assets/img/sl-verano-apple.jpeg";
+import veranoEscolares from "./assets/img/sl-verano-escolares.jpg";
 
 const Carousel = () => {
-  const images = ["sl-verano-apple.jpeg", "sl-verano-escolar.jpg"];
+  const images = [veranoApple, veranoEscolares];
   const [selectedPos, setSelectedPos] = useState(0);
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
@@ -17,7 +19,7 @@ const Carousel = () => {
   };
 
   const next = () => {
-    if (selectedPos < images.length) {
+    if (selectedPos < images.length - 1) {
       setSelectedImage(images[selectedPos + 1]);
       setSelectedPos(selectedPos + 1);
     } else {
@@ -26,7 +28,13 @@ const Carousel = () => {
     }
   };
 
-  return <></>;
+  return (
+    <>
+      <img src={selectedImage} alt="Imagen" />
+      <button onClick={previous}>{"<"}</button>
+      <button onClick={next}>{">"}</button>
+    </>
+  );
 };
 
 export default Carousel;
