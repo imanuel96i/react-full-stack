@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from 'react'
-import './css/Carousel.sass'
->>>>>>> 35de5fae856f40bcb181385cb3edb5389272efc7
+import "./css/Carousel.sass";
 
 const Carousel = () => {
   const images = ["sl-verano-apple.jpeg", "sl-verano-escolar.jpg"];
