@@ -7,6 +7,7 @@ const Carousel = () => {
   const images = [veranoApple, veranoEscolares];
   const [imagenActual, setImagenActual] = useState(0);
   const cant = images.length;
+  const [loaded, setLoaded] = useState(false);
 
   //if (!Array.isArray(images) || cant === 0) return;
 
@@ -39,7 +40,8 @@ const Carousel = () => {
                   key={index}
                   src={img}
                   alt="Imagen"
-                  className="imgCarousel"
+                  className={loaded ? "imgCarousel" : ""}
+                  onLoad={() => setLoaded(true)}
                 ></img>
               )}
             </div>
