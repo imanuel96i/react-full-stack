@@ -5,34 +5,40 @@ import veranoEscolares from "./assets/img/sl-verano-escolares.jpg";
 
 const Carousel = () => {
   const images = [veranoApple, veranoEscolares];
-  const [selectedPos, setSelectedPos] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [imagenActual, setImagenActual] = useState(0);
+  const cant = images.length;
 
-  const previous = () => {
-    if (selectedPos > 0) {
-      setSelectedImage(images[selectedPos - 1]);
-      setSelectedPos(selectedPos - 1);
-    } else {
-      setSelectedImage(images[images.length - 1]);
-      setSelectedPos(images.length - 1);
-    }
+  //if (!Array.isArray(images) || cant === 0) return;
+
+  const sigImagen = () => {
+    setImagenActual(imagenActual === cant - 1 ? 0 : imagenActual + 1);
   };
 
-  const next = () => {
-    if (selectedPos < images.length - 1) {
-      setSelectedImage(images[selectedPos + 1]);
-      setSelectedPos(selectedPos + 1);
-    } else {
-      setSelectedImage(images[0]);
-      setSelectedPos(0);
-    }
+  const antImagen = () => {
+    setImagenActual(imagenActual === 0 ? cant - 1 : imagenActual - 1);
   };
 
   return (
     <>
-      <img src={selectedImage} alt="Imagen" />
-      <button onClick={previous}>{"<"}</button>
-      <button onClick={next}>{">"}</button>
+      <div className="container">
+        {images.map((img, index) => {
+          return (
+            <div className={imagenActual === index ? "slide active" : "slide"}>
+              {imagenActual === index && (
+                <img
+                  key={index}
+                  src={img}
+                  alt="Imagen"
+                  className="imgCarousel"
+                ></img>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      <button onClick={antImagen}>{"<"}</button>
+      <button onClick={sigImagen}>{">"}</button>
     </>
   );
 };
