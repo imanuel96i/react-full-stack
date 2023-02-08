@@ -1,4 +1,4 @@
-.NavBar 
+.NavBar
     display: flex
     flex-wrap: wrap
     justify-content: space-between
@@ -10,7 +10,7 @@
 .NavContainer
     flex: 1
 
-.Bars
+.NavDisplayMenuButton
     display: none
     @media screen and (max-width: 1250px)
         display: flex
@@ -19,6 +19,9 @@
         justify-content: flex-end
         position: absolute
         right: 10px
+
+.NavDisplayMenuButton:hover
+    cursor: pointer
 
 .NavContainerLink
     flex: 1
@@ -37,12 +40,7 @@
     flex: 1
     max-width: 500px
 
-.FormSearch
-    display: inline-flex
-    justify-content: center
-    width: 100%
-
-.SearchBar
+.NavSearchBar
     width: 100%
     border-radius: .7rem
     border-width: 1px
@@ -51,11 +49,11 @@
     outline: 0
     appearance: none
 
-@media screen and (max-width: 1250px) 
+@media screen and (max-width: 1250px)
     .NavBar
         display: flex
         padding: 10px
-        height: 100px
+        height: auto
         flex-direction: column
 
     .NavContainer
@@ -66,17 +64,18 @@
     .NavContainerSearch
         display: flex
         width: 100%
-    
+
     .NavContainerLink
-        display: flex
         flex-direction: column
         text-align: center
-        width: 100%
-    
-    .SearchBar
+
+    .NavSearchBar
         width: 100%
         margin-left: auto
         margin-right: auto
-    
-    .NavContainerLink
+
+    .NavContainerLink.clicked
+        display: flex
+
+    .NavContainerLink.unclicked
         display: none
