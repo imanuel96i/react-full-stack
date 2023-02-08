@@ -28,7 +28,9 @@ const Carousel = () => {
   return (
     <>
       <div className="container">
-        <button onClick={antImagen}>{"<"}</button>
+        <button className="ant" onClick={antImagen}>
+          {"<"}
+        </button>
         {images.map((img, index) => {
           return (
             <div className={imagenActual === index ? "slide active" : "slide"}>
@@ -44,7 +46,9 @@ const Carousel = () => {
           );
         })}
 
-        <button onClick={sigImagen}>{">"}</button>
+        <button className="sig" onClick={sigImagen}>
+          {">"}
+        </button>
       </div>
     </>
   );

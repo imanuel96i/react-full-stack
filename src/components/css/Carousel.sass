@@ -6,7 +6,6 @@
     flex-direction: row
     justify-content: center
     align-items: center
-    padding: 30px
     border-radius: 6px
     overflow: hidden
 
@@ -28,3 +27,33 @@
         opacity: 0
 .imgCarousel
     max-width: 100%
+
+.ant,.sig
+    position: absolute
+    z-index: 1
+    transform: translateY(-50%)
+    background: grey
+    color: white
+    width: 1.25rem
+    height: 1.25rem
+    display: grid
+    place-items: center
+    border-color: transparent
+    font-size: 0.9rem
+    border-radius: 0.25rem
+    cursor: pointer
+    transition: all 0.3s linear
+.ant:hover,
+.sig:hover
+    background: hsl(21, 62%, 45%)
+.ant
+
+    left: 10px
+.sig
+    right: 10px
+
+@media (min-width: 800px)
+    .ant,.sig
+        width: 2rem
+        height: 2rem
+        font-size: 1.5rem
