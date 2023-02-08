@@ -1,15 +1,17 @@
 import React from 'react'
 import Nav from './components/Nav'
 import Carousel from './components/Carousel'
-import './components/css/index.sass'
 import Card from "./components/Card"
+import Footer from "./components/Footer"
+import './components/css/index.sass'
 
 function Home() {
   return (
     <>
       <Nav />
       <Carousel />
-      <Card/>
+      <Card />
+      <Footer/>
     </>
   );
 }

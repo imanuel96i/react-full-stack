@@ -4,7 +4,7 @@ import verano from './assets/img/sl-verano-escolares.jpg'
 
 function Card() {
   return (
-      <div className='Container'>
+      <div className='ContainerCard'>
           <div className='Card'>
               <h2>Verano</h2>
               <img className='Img' src={verano} alt='' />
