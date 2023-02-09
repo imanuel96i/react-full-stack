@@ -20,8 +20,8 @@ function Nav() {
   return (
     <div className="NavBar">
       <div className="NavContainer">
-        <a href="">
-          <img src={logo} width="130" />
+        <a href="#">
+          <img src={logo} width="120" />
         </a>
         {displayMenuButton ? (
           <FaBars className="NavDisplayMenuButton" onClick={updateMenuButton} />

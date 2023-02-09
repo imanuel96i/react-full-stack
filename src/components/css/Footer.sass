@@ -1,25 +1,31 @@
-.ContainerFoo
-    margin-top: 15px
-    background-color: #F1EAE8
-.Footer
-    display: grid
-    gap: 1rem
-    grid-auto-rows: 10rem
-    grid-auto-flow: dense
-    grid-template-columns: 1fr 1fr
+.social-footer
+    padding: 1rem
+    background: #8a8a8a
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
 
-.Fcard
-    padding: 15px
+ul, li
+    list-style: none
+
+.social-footer .social-footer-icons li:last-of-type
+    margin-right: 0
+
+.Rrss
+    font-size: 1.3rem
+    color: #fefefe
+
+.Rrss:hover
+    color: #4a4a4a
+    transition: color 0.3s ease-in
+
+.menu-simple
     display: flex
     flex-direction: row
     align-items: center
-
-.Rrss
-    width: 30px
-    height: 30px
-.Rssi
-    margin-bottom: 15px
-
-.Fcard a
-    text-decoration: none
-    color: inherit
