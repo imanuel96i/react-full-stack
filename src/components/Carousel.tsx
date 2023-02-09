@@ -1,55 +1,73 @@
 import React, { useEffect, useState } from "react";
 import "./css/Carousel.sass";
-import veranoApple from "./assets/img/sl-verano-apple.jpeg";
-import veranoEscolares from "./assets/img/sl-verano-escolares.jpg";
+import {
+  HiOutlineArrowCircleLeft,
+  HiOutlineArrowCircleRight,
+} from "react-icons/hi";
 
-const Carousel = () => {
-  const images = [veranoApple, veranoEscolares];
-  const [imagenActual, setImagenActual] = useState(0);
-  const cant = images.length;
+interface Props {
+  autoPlay?: boolean;
+  showButtons?: boolean;
+}
+
+const Carousel = (props: Props) => {
+  const images = ["sl-verano-apple.jpeg", "sl-verano-escolares.jpg"];
+  const [indexActual, setIndexActual] = useState(0);
+  const [imagenActual, setImagenActual] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
   //if (!Array.isArray(images) || cant === 0) return;
 
+  useEffect(() => {
+    if (props.autoPlay || !props.showButtons) {
+      const interval = setInterval(() => {
+        seleccionarImagen(indexActual, images, true);
+      }, 10000);
+      return () => clearInterval(interval);
+    }
+  });
+
+  const seleccionarImagen = (
+    index: number,
+    images: string[],
+    next: boolean
+  ) => {
+    setLoaded(false);
+    const condicion = next ? indexActual < images.length - 1 : indexActual > 0;
+    const indexSig = next
+      ? condicion
+        ? indexActual + 1
+        : 0
+      : condicion
+      ? indexActual - 1
+      : images.length - 1;
+    setImagenActual(images[indexSig]);
+    setIndexActual(indexSig);
+  };
+
   const sigImagen = () => {
-    setImagenActual(imagenActual === cant - 1 ? 0 : imagenActual + 1);
+    seleccionarImagen(indexActual, images, true);
   };
 
   const antImagen = () => {
-    setImagenActual(imagenActual === 0 ? cant - 1 : imagenActual - 1);
+    seleccionarImagen(indexActual, images, false);
   };
-
-  useEffect(() => {
-    let slider = setInterval(() => {
-      sigImagen();
-    }, 10000);
-    return () => clearInterval(slider);
-  });
 
   return (
     <>
       <div className="container">
         <button className="ant" onClick={antImagen}>
-          {"<"}
+          <HiOutlineArrowCircleLeft />
         </button>
-        {images.map((img, index) => {
-          return (
-            <div className={imagenActual === index ? "slide active" : "slide"}>
-              {imagenActual === index && (
-                <img
-                  key={index}
-                  src={img}
-                  alt="Imagen"
-                  className={loaded ? "imgCarousel" : ""}
-                  onLoad={() => setLoaded(true)}
-                ></img>
-              )}
-            </div>
-          );
-        })}
+        <img
+          src={require(`./assets/img/${imagenActual}`)}
+          alt="Imagen"
+          className={loaded ? "imgC loaded" : "imgC"}
+          onLoad={() => setLoaded(true)}
+        />
 
         <button className="sig" onClick={sigImagen}>
-          {">"}
+          <HiOutlineArrowCircleRight />
         </button>
       </div>
     </>

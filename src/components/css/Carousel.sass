@@ -9,13 +9,13 @@
     border-radius: 6px
     overflow: hidden
     margin-bottom: 5px
-
-.slide
-    max-width: 100%
+.imgC
+    width: 100%
     height: auto
+    opacity: 0
 
-.slide.active
-    animation: fadeinout 10s
+    &.loaded
+        animation: fadeinout 10s
 
 @keyframes fadeinout
     0%
@@ -26,34 +26,36 @@
         opacity: 1
     100%
         opacity: 0
-.imgCarousel
-    max-width: 100%
-
 .ant,.sig
     position: absolute
     z-index: 1
+    background: none
     transform: translateY(-50%)
-    background: grey
-    color: white
-    width: 1.25rem
-    height: 1.25rem
-    display: grid
-    place-items: center
+    color: black
+    width: 40px
+    height: 40px
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
     border-color: transparent
-    font-size: 0.9rem
-    border-radius: 0.25rem
+    border-radius: 50%
+    font-size: 40px
     cursor: pointer
     transition: all 0.3s linear
+    opacity: 0.6
+    font-weight: bold
 .ant:hover,
 .sig:hover
-    background: hsl(21, 62%, 45%)
+
+    opacity: 1
 .ant
 
     left: 10px
 .sig
     right: 10px
 
-@media (min-width: 800px)
+@media (max-width: 800px)
     .ant,.sig
         width: 2rem
         height: 2rem
