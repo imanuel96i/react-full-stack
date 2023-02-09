@@ -6,12 +6,15 @@ import {
   AiFillLinkedin,
   AiFillTwitterSquare,
 } from "react-icons/ai";
+import logo from "./assets/img/logo.png";
 
 function Footer() {
   return (
     <footer className="social-footer">
       <div className="social-footer-left">
-        <a href="#">Logo</a>
+        <a href="#">
+          <img src={logo} width="120" />
+        </a>
       </div>
       <div className="social-footer-icons">
         <ul className="menu-simple">
