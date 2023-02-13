@@ -13,9 +13,10 @@ function Footer() {
     <footer className="social-footer">
       <div className="social-footer-left">
         <a href="#s">
-          <img src={logo} width="120" alt="imagen"/>
+          <img src={logo} width="120" alt="imagen" className="logo"/>
         </a>
       </div>
+      <div className="copy">&copy; Proyecto Metra 2023. Todos los derechos reservados</div>
       <div className="social-footer-icons">
         <ul className="menu-simple">
           <li>
