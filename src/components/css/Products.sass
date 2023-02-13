@@ -1,0 +1,27 @@
+.ContainerProducts
+    display: grid
+    gap: 1rem
+    grid-template-columns: minmax(20%, 1fr) minmax(80%, 1fr)
+    margin: 1%
+
+.ProductCards
+    display: grid
+    gap: 1rem
+    grid-auto-rows: 22rem
+    grid-auto-flow: dense
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr))
+    margin: 1%
+
+@media screen and (min-width: 90rem)
+    .ProductCards
+        grid-template-columns: repeat(4, 1fr)
+
+.Cardp
+    background-color: white
+    padding: 15px
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.01), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.4)
