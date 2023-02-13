@@ -39,7 +39,7 @@ function Nav() {
           type="text"
           id="txt"
           className="NavSearchBar"
-          placeholder="HOLA"
+          placeholder="Busqueda de productos"
         />
       </div>
       <div id="test" className={classContainerLink}>
