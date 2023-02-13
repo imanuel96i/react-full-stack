@@ -44,7 +44,7 @@ function Nav() {
       </div>
       <div id="test" className={classContainerLink}>
         <Link to="/">Home</Link>
-        <Link to="#k">About</Link>
+        <Link to="/About">About</Link>
         <Link to="#kk">Contact</Link>
       </div>
     </div>

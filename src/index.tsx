@@ -5,6 +5,8 @@ import Nav from './components/Nav';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './About';
+import './components/css/index.sass'
 
 
 const root = ReactDOM.createRoot(
@@ -13,11 +15,20 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-      </Routes>
-      <Footer />
+      <div style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100vh"
+      }}>
+        <Nav />
+        <div style={{flexGrow: 1}}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/About' element={<About/>} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );
