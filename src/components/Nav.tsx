@@ -3,6 +3,8 @@ import "./css/Nav.sass";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import logo from "./assets/img/logo.png";
+import { NavLink as Link } from 'react-router-dom';
+
 
 function Nav() {
   const [classContainerLink, setClassContainerLink] = useState(
@@ -20,9 +22,9 @@ function Nav() {
   return (
     <div className="NavBar">
       <div className="NavContainer">
-        <a href="#s">
+        <Link to='/'>
           <img src={logo} width="120" alt="imagen"/>
-        </a>
+        </Link>
         {displayMenuButton ? (
           <FaBars className="NavDisplayMenuButton" onClick={updateMenuButton} />
         ) : (
@@ -41,9 +43,9 @@ function Nav() {
         />
       </div>
       <div id="test" className={classContainerLink}>
-        <a href="www.google.cl">Home</a>
-        <a href="#k">About</a>
-        <a href="#kk">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="#k">About</Link>
+        <Link to="#kk">Contact</Link>
       </div>
     </div>
   );

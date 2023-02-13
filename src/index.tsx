@@ -4,15 +4,21 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Nav/>
-    <Home />
-    <Footer/>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
