@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './About';
+import Products from './Products';
 import './components/css/index.sass'
 
 
@@ -24,7 +24,7 @@ root.render(
         <div style={{flexGrow: 1}}>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/About' element={<About/>} />
+            <Route path='/Products' element={<Products/>} />
           </Routes>
         </div>
         <Footer />
