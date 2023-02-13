@@ -16,9 +16,29 @@
     .ProductCards
         grid-template-columns: repeat(4, 1fr)
 
+@media screen and (min-width: 63rem)
+    .OpenSideFilter
+        display: none
+
 @media screen and (max-width: 63rem)
     .LeftNav
         display: none
+
+    .OpenSideFilter
+        border-radius: 5px
+        display: block
+        border: 2px solid
+        color: white
+        width: 71px
+        background: black
+        padding: 4px 8px
+        font-weight: bold
+        transition: 0.5s
+        margin-top: 1px
+        &:hover
+            background: white
+            color: black
+
     .ContainerProducts
         grid-template-columns: 1fr
 .Cardp
