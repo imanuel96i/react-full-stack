@@ -16,18 +16,26 @@ function Nav() {
   const [classContainerLink, setClassContainerLink] = useState(
     "NavContainerLink unclicked"
   );
+
+  const [classNavBar, setClassNavBar] = useState(
+    "NavBar unclicked"
+  );
+  
   const [displayMenuButton, setDisplayMenuButton] = useState(true);
+
   const updateMenuButton = () => {
     setDisplayMenuButton(!displayMenuButton);
     if (displayMenuButton === true) {
+      setClassNavBar("NavBar clicked");
       setClassContainerLink("NavContainerLink clicked");
     } else {
       setClassContainerLink("NavContainerLink unclicked");
+      setClassNavBar("NavBar unclicked");
     }
   };
   return (
     <>
-      <div className="NavBar">
+      <div className={classNavBar}>
         <div className="NavContainer">
           <Link to='/'>
             <img src={logo} width="120" alt="imagen" />
