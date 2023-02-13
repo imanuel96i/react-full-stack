@@ -7,10 +7,36 @@
     box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.2)
     padding: 20px
     position: relative
+    height: 80px
 
 .NavContainer
     flex: 1
+    display: flex
+    align-items: center
 
+.NavCategories:hover  
+    cursor: pointer
+    
+.NavCategories
+    display: flex
+    align-items: center
+    margin-left: 20px
+    font-size: 20px
+    @media screen and (max-width: 1250px) 
+        display: none
+
+.NavButton
+    background: none
+    border: 0
+    font: inherit
+    color: inherit 
+    line-height: normal
+    overflow: visible
+    padding: 0
+
+.NavButton:hover
+    cursor: pointer
+    
 .NavDisplayMenuButton
     display: none
     @media screen and (max-width: 1250px)

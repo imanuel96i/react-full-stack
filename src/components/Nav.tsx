@@ -4,9 +4,15 @@ import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import logo from "./assets/img/logo.png";
 import { NavLink as Link } from 'react-router-dom';
-
+import SideMenu from "./SideMenu/SideMenu";
 
 function Nav() {
+  const [sideMenuState, setSideMenuState] = useState(false);
+  
+  const updateSideMenu = () =>{
+    setSideMenuState(!sideMenuState);
+  }
+
   const [classContainerLink, setClassContainerLink] = useState(
     "NavContainerLink unclicked"
   );
@@ -20,34 +26,41 @@ function Nav() {
     }
   };
   return (
-    <div className="NavBar">
-      <div className="NavContainer">
-        <Link to='/'>
-          <img src={logo} width="120" alt="imagen"/>
-        </Link>
-        {displayMenuButton ? (
-          <FaBars className="NavDisplayMenuButton" onClick={updateMenuButton} />
-        ) : (
-          <MdClose
-            className="NavDisplayMenuButton"
-            onClick={updateMenuButton}
+    <>
+      <div className="NavBar">
+        <div className="NavContainer">
+          <Link to='/'>
+            <img src={logo} width="120" alt="imagen" />
+          </Link>
+          <div className="NavCategories" onClick={updateSideMenu}>
+            <FaBars />
+            <button className="NavButton"> Categorias</button>
+          </div>
+          {displayMenuButton ? (
+            <FaBars className="NavDisplayMenuButton" onClick={updateMenuButton} />
+          ) : (
+            <MdClose
+              className="NavDisplayMenuButton"
+              onClick={updateMenuButton}
+            />
+          )}
+        </div>
+        <div className="NavContainerSearch">
+          <input
+            type="text"
+            id="txt"
+            className="NavSearchBar"
+            placeholder="HOLA"
           />
-        )}
+        </div>
+        <div id="test" className={classContainerLink}>
+          <Link to="/">Home</Link>
+          <Link to="/About">About</Link>
+          <Link to="#kk">Contact</Link>
+        </div>
       </div>
-      <div className="NavContainerSearch">
-        <input
-          type="text"
-          id="txt"
-          className="NavSearchBar"
-          placeholder="HOLA"
-        />
-      </div>
-      <div id="test" className={classContainerLink}>
-        <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
-        <Link to="#kk">Contact</Link>
-      </div>
-    </div>
+      <SideMenu menuState={sideMenuState}/>
+    </>
   );
 }
 

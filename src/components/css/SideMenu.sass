@@ -1,0 +1,40 @@
+.MainContainerSideMenu
+    width: 0
+    height: auto
+    z-index: 100
+    background-color: white
+    position: absolute
+    transition: 0.35s
+    box-shadow: inset -7px -7px 5px -7px rgba(0,0,0,0.4)
+    left: 0
+    top: 80px
+    padding: 5px
+    
+
+.MainContainerSideMenu.clicked
+    opacity: 1
+    width: 300px
+    @media screen and (max-width: 1250px) 
+        opacity: 0    
+        width: 0
+
+.MainContainerSideMenu.unclicked
+    opacity: 0
+    width: 0
+
+.CategoryItemSideMenu
+    font-size: 20px
+    height: 50px
+
+.CategoryIcon
+    display: flex
+    align-items: center
+
+.CategoryItemSideMenuLink
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-right: 15px
+    padding-left: 10px
+    text-decoration: none
+    color: black
