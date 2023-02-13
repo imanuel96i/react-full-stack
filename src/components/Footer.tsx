@@ -12,8 +12,8 @@ function Footer() {
   return (
     <footer className="social-footer">
       <div className="social-footer-left">
-        <a href="#">
-          <img src={logo} width="120" />
+        <a href="#s">
+          <img src={logo} width="120" alt="imagen"/>
         </a>
       </div>
       <div className="social-footer-icons">

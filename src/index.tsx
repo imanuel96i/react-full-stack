@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,7 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Nav/>
     <Home />
+    <Footer/>
   </React.StrictMode>
 );
 
