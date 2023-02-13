@@ -19,34 +19,34 @@ const Carousel = (props: Props) => {
   //if (!Array.isArray(images) || cant === 0) return;
 
   useEffect(() => {
-    if (props.autoPlay || !props.showButtons) {
+    if (props.autoPlay) {
       const interval = setInterval(() => {
-        seleccionarImagen(indexActual, images, true);
+        seleccionarImagen(indexActual, images);
       }, 10000);
       return () => clearInterval(interval);
     }
   });
 
-  const seleccionarImagen = (
-    index: number,
-    images: string[],
-    next: boolean
-  ) => {
+  const seleccionarImagen = (index: number, images: string[], next = true) => {
     setLoaded(false);
-    const condicion = next ? indexActual < images.length - 1 : indexActual > 0;
-    const indexSig = next
-      ? condicion
-        ? indexActual + 1
-        : 0
-      : condicion
-      ? indexActual - 1
-      : images.length - 1;
-    setImagenActual(images[indexSig]);
-    setIndexActual(indexSig);
+    setTimeout(() => {
+      const condicion = next
+        ? indexActual < images.length - 1
+        : indexActual > 0;
+      const indexSig = next
+        ? condicion
+          ? indexActual + 1
+          : 0
+        : condicion
+        ? indexActual - 1
+        : images.length - 1;
+      setImagenActual(images[indexSig]);
+      setIndexActual(indexSig);
+    }, 1000);
   };
 
   const sigImagen = () => {
-    seleccionarImagen(indexActual, images, true);
+    seleccionarImagen(indexActual, images);
   };
 
   const antImagen = () => {
