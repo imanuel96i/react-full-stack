@@ -6,15 +6,42 @@ import SideFilter from "./components/SideFilter";
 
 function Products() {
   const img = [
-        require('./components/assets/imgprod/AlPacino.webp'),
-        require('./components/assets/imgprod/Flechas.webp'),
-        require('./components/assets/imgprod/Halloween.webp'),
-        require('./components/assets/imgprod/Hellraiser.webp'),
-        require('./components/assets/imgprod/Jason.webp'),
-        require('./components/assets/imgprod/LoveLost.webp'),
-        require('./components/assets/imgprod/MMyers.webp'),
-        require('./components/assets/imgprod/Paloma.webp'),
-        require('./components/assets/imgprod/Scream.webp')
+    {
+      name: 'Polera AlPacino',
+      src: require('./components/assets/imgprod/AlPacino.webp'),
+    },
+    {
+      name: 'Polera Flechas',
+      src: require('./components/assets/imgprod/Flechas.webp'),
+    },
+    {
+      name: 'Polera Halloween',
+      src: require('./components/assets/imgprod/Halloween.webp'),
+    },
+    {
+      name: 'Polera Hellraiser',
+      src: require('./components/assets/imgprod/Hellraiser.webp'),
+    },
+    {
+      name: 'Polera Jason',
+      src: require('./components/assets/imgprod/Jason.webp'),
+    },
+    {
+      name: 'Polera LoveLost',
+      src: require('./components/assets/imgprod/LoveLost.webp'),
+    },
+    {
+      name: 'Polera MMyers',
+      src: require('./components/assets/imgprod/MMyers.webp'),
+    },
+    {
+      name: 'Polera Paloma',
+      src: require('./components/assets/imgprod/Paloma.webp'),
+    },
+    {
+      name: 'Polera Scream',
+      src: require('./components/assets/imgprod/Scream.webp'),
+    } 
   ]
   return (
     <div className="ContainerProducts">
@@ -30,7 +57,8 @@ function Products() {
         {
           img.map((image, index) => (
             <div key={index} className="Cardp">
-              <img className='Img' src={image} alt="image" />
+              <h2>{image.name}</h2>
+              <img className='Img' src={image.src} alt="image" />
             </div>
           ))   
         }

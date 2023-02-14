@@ -4,24 +4,52 @@ import './css/Card.sass'
 
 
 function Card() {
-    const img = [
-        require('./assets/imgprod/AlPacino.webp'),
-        require('./assets/imgprod/Flechas.webp'),
-        require('./assets/imgprod/Halloween.webp'),
-        require('./assets/imgprod/Hellraiser.webp'),
-        require('./assets/imgprod/Jason.webp'),
-        require('./assets/imgprod/LoveLost.webp'),
-        require('./assets/imgprod/MMyers.webp'),
-        require('./assets/imgprod/Paloma.webp'),
-        require('./assets/imgprod/Scream.webp')
-    ]
+  const img = [
+    {
+      name: 'Polera AlPacino',
+      src: require('./assets/imgprod/AlPacino.webp'),
+    },
+    {
+      name: 'Polera Flechas',
+      src: require('./assets/imgprod/Flechas.webp'),
+    },
+    {
+      name: 'Polera Halloween',
+      src: require('./assets/imgprod/Halloween.webp'),
+    },
+    {
+      name: 'Polera Hellraiser',
+      src: require('./assets/imgprod/Hellraiser.webp'),
+    },
+    {
+      name: 'Polera Jason',
+      src: require('./assets/imgprod/Jason.webp'),
+    },
+    {
+      name: 'Polera LoveLost',
+      src: require('./assets/imgprod/LoveLost.webp'),
+    },
+    {
+      name: 'Polera MMyers',
+      src: require('./assets/imgprod/MMyers.webp'),
+    },
+    {
+      name: 'Polera Paloma',
+      src: require('./assets/imgprod/Paloma.webp'),
+    },
+    {
+      name: 'Polera Scream',
+      src: require('./assets/imgprod/Scream.webp'),
+    } 
+  ]
     
   return (
       <div className='ContainerCard'>
         {
         img.map((image, index) => (
           <div key={index} className='Card'>
-            <img className='Img' src={image} alt="image" />
+            <h2>{image.name}</h2>
+            <img className='Img' src={image.src} alt="image" />
           </div>
         ))    
         }
