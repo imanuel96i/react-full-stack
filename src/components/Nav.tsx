@@ -36,7 +36,12 @@ function Nav() {
       <div className={classNavBar}>
         <div className="NavContainer">
           <Link to="/">
-            <img src={logo} width="120" alt="imagen" />
+            <img
+              src={logo}
+              width="120"
+              alt="imagen"
+              style={{ filter: "invert(1)" }}
+            />
           </Link>
           <div className="NavCategories" onClick={updateSideMenu}>
             <FaBars />
