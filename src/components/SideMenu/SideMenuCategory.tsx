@@ -9,7 +9,6 @@ function SideMenuCategory() {
                     <SlTag style={{ marginRight: "10px" }}/>
                     <p >Ropa</p>
                 </div>
-
                 <SlArrowRight />
             </Link>
         </div>
