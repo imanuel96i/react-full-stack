@@ -69,13 +69,13 @@ function Nav() {
         </div>
         <div id="test" className={classContainerLink}>
           <Link className="underline" to="/">
-            Home
+            Inicio
           </Link>
           <Link className="underline" to="/Products">
-            Products
+            Productos
           </Link>
           <Link className="underline" to="#kk">
-            Contact
+            Contacto
           </Link>
         </div>
       </div>
