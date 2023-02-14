@@ -5,17 +5,19 @@
     align-items: center
     overflow: hidden
     margin-bottom: 5px
+
 .imgC
     width: 100%
     height: auto
     opacity: 0
     transition: 1s
+    z-index: 1
     &.loaded
         opacity: 1
 
 .ant,.sig
     position: absolute
-    z-index: 1
+    z-index: 2
     background: none
     transform: translateY(-50%)
     color: black
@@ -41,6 +43,11 @@
     left: 10px
 .sig
     right: 10px
+
+.imgFondo
+    width: 100%
+    position: absolute
+    height: auto
 
 @media (max-width: 800px)
     .ant,.sig

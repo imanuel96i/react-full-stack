@@ -60,6 +60,11 @@ const Carousel = (props: Props) => {
           <HiOutlineArrowCircleLeft />
         </button>
         <img
+          className="imgFondo"
+          src={require("./assets/img/sin_fondo.png")}
+          alt=""
+        />
+        <img
           src={require(`./assets/img/${imagenActual}`)}
           alt="Imagen"
           className={loaded ? "imgC loaded" : "imgC"}
