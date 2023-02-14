@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Carousel = (props: Props) => {
-  const images = ["sl-verano-apple.jpeg", "sl-verano-escolares.jpg"];
+  const images = ["1_sin_logo.png", "2_sin_logo.png"];
   const [indexActual, setIndexActual] = useState(0);
   const [imagenActual, setImagenActual] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);

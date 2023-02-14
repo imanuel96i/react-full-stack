@@ -3,24 +3,22 @@ import "./css/Nav.sass";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import logo from "./assets/img/logo.png";
-import { NavLink as Link } from 'react-router-dom';
+import { NavLink as Link } from "react-router-dom";
 import SideMenu from "./SideMenu/SideMenu";
 
 function Nav() {
   const [sideMenuState, setSideMenuState] = useState(false);
-  
-  const updateSideMenu = () =>{
+
+  const updateSideMenu = () => {
     setSideMenuState(!sideMenuState);
-  }
+  };
 
   const [classContainerLink, setClassContainerLink] = useState(
     "NavContainerLink unclicked"
   );
 
-  const [classNavBar, setClassNavBar] = useState(
-    "NavBar unclicked"
-  );
-  
+  const [classNavBar, setClassNavBar] = useState("NavBar unclicked");
+
   const [displayMenuButton, setDisplayMenuButton] = useState(true);
 
   const updateMenuButton = () => {
@@ -37,7 +35,7 @@ function Nav() {
     <>
       <div className={classNavBar}>
         <div className="NavContainer">
-          <Link to='/'>
+          <Link to="/">
             <img src={logo} width="120" alt="imagen" />
           </Link>
           <div className="NavCategories" onClick={updateSideMenu}>
@@ -45,7 +43,10 @@ function Nav() {
             <button className="NavButton"> Categorias</button>
           </div>
           {displayMenuButton ? (
-            <FaBars className="NavDisplayMenuButton" onClick={updateMenuButton} />
+            <FaBars
+              className="NavDisplayMenuButton"
+              onClick={updateMenuButton}
+            />
           ) : (
             <MdClose
               className="NavDisplayMenuButton"
@@ -58,16 +59,18 @@ function Nav() {
             type="text"
             id="txt"
             className="NavSearchBar"
-            placeholder="HOLA"
+            placeholder="Búsqueda de productos"
           />
         </div>
         <div id="test" className={classContainerLink}>
-          <Link to="/">Home</Link>
+          <Link className="" to="/">
+            Home
+          </Link>
           <Link to="/Products">Products</Link>
           <Link to="#kk">Contact</Link>
         </div>
       </div>
-      <SideMenu menuState={sideMenuState}/>
+      <SideMenu menuState={sideMenuState} />
     </>
   );
 }
