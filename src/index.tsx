@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Home from './Home';
+import Error from './Error'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Products from './Products';
@@ -25,6 +26,7 @@ root.render(
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Products' element={<Products/>} />
+            <Route path='*' element={<Error/>} />
           </Routes>
         </div>
         <Footer />
