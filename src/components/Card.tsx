@@ -24,6 +24,34 @@ function Card() {
       name: "Polera Scream",
       src: require("./assets/imgprod/Scream.webp"),
     },
+    {
+      name: "Polera Click",
+      src: require("./assets/imgprod/Flechas.webp"),
+    },
+    {
+      name: "Polera Halloween",
+      src: require("./assets/imgprod/Halloween.webp"),
+    },
+    {
+      name: "Polera Jason",
+      src: require("./assets/imgprod/Jason.webp"),
+    },
+    {
+      name: "Polera Michael Myers",
+      src: require("./assets/imgprod/MMyers.webp"),
+    },
+    {
+      name: "Polera Scream",
+      src: require("./assets/imgprod/Scream.webp"),
+    },
+    {
+      name: "Polera Michael Myers",
+      src: require("./assets/imgprod/MMyers.webp"),
+    },
+    {
+      name: "Polera Scream",
+      src: require("./assets/imgprod/Scream.webp"),
+    },
   ];
 
   return (
