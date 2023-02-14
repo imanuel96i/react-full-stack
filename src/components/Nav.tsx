@@ -63,11 +63,15 @@ function Nav() {
           />
         </div>
         <div id="test" className={classContainerLink}>
-          <Link className="" to="/">
+          <Link className="underline" to="/">
             Home
           </Link>
-          <Link to="/Products">Products</Link>
-          <Link to="#kk">Contact</Link>
+          <Link className="underline" to="/Products">
+            Products
+          </Link>
+          <Link className="underline" to="#kk">
+            Contact
+          </Link>
         </div>
       </div>
       <SideMenu menuState={sideMenuState} />
