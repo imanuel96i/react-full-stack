@@ -1,3 +1,7 @@
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 06/02/23
+// Fecha modificación: 14/02/23
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Footer from './components/Footer';
@@ -9,7 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Products from './Products';
 import './components/css/index.sass'
 
-
+// Indice general de la aplicación con sus rutas
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -35,7 +39,5 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Default 
 reportWebVitals();

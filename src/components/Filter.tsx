@@ -1,16 +1,23 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 13/02/23
+// Fecha modificación: 13/02/23
+
+// Importaciones
 import React, { useState } from "react";
 import "./css/Filter.sass";
 
 function Filter() {
+
+  // Declaración de variables
   const [wid, setWid] = useState("0px");
 
+  // Abrir menú de filtros 
   const openFilter = () => {
     console.log(wid);
     setWid("250px");
   };
 
+  // Cerrar menú de filtros 
   const closeFilter = () => {
     setWid("0px");
   };

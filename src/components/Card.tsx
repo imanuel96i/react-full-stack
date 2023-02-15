@@ -1,8 +1,14 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 07/02/23
+// Fecha modificación: 13/02/23
+
+// Importaciones
 import React from "react";
 import "./css/Card.sass";
 
 function Card() {
+
+  // Conjunto de imagenes estáticas de productos a mostrar
   const img = [
     {
       name: "Polera Click",
@@ -59,7 +65,7 @@ function Card() {
       {img.map((image, index) => (
         <div key={index} className="Card">
           <h2>{image.name}</h2>
-          <img className="Img" src={image.src} alt="image" />
+          <img className="Img" src={image.src} alt="Polera" />
         </div>
       ))}
     </div>

@@ -1,3 +1,8 @@
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 06/02/23
+// Fecha modificación: 14/02/23
+
+// Importaciones
 import React, { useEffect, useState } from "react";
 import "./css/Carousel.sass";
 import {
@@ -5,19 +10,20 @@ import {
   HiOutlineArrowCircleRight,
 } from "react-icons/hi";
 
+// Variables de typeScript
 interface Props {
   autoPlay?: boolean;
-  showButtons?: boolean;
 }
 
 const Carousel = (props: Props) => {
+
+  // Declaración de variables
   const images = ["1_sin_logo.png", "2_sin_logo.png"];
   const [indexActual, setIndexActual] = useState(0);
   const [imagenActual, setImagenActual] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
-  //if (!Array.isArray(images) || cant === 0) return;
-
+ // Movimiento automático del carrusel depués de 10 segundos
   useEffect(() => {
     if (props.autoPlay) {
       const interval = setInterval(() => {
@@ -27,6 +33,7 @@ const Carousel = (props: Props) => {
     }
   });
 
+  // Cambio de imagenes
   const seleccionarImagen = (index: number, images: string[], next = true) => {
     setLoaded(false);
     setTimeout(() => {
@@ -45,6 +52,7 @@ const Carousel = (props: Props) => {
     }, 1000);
   };
 
+  // Cambio manual de imagenes
   const sigImagen = () => {
     seleccionarImagen(indexActual, images);
   };

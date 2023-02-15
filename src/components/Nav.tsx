@@ -1,3 +1,8 @@
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 06/02/23
+// Fecha modificación: 14/02/23
+
+// Importaciones
 import React, { useState } from "react";
 import "./css/Nav.sass";
 import { FaBars } from "react-icons/fa";
@@ -7,20 +12,21 @@ import { NavLink as Link } from "react-router-dom";
 import SideMenu from "./SideMenu/SideMenu";
 
 function Nav() {
-  const [sideMenuState, setSideMenuState] = useState(false);
 
-  const updateSideMenu = () => {
-    setSideMenuState(!sideMenuState);
-  };
-
+  // Declaración de variables
+  const [sideMenuState, setSideMenuState] = useState(false);  
   const [classContainerLink, setClassContainerLink] = useState(
     "NavContainerLink unclicked"
   );
-
   const [classNavBar, setClassNavBar] = useState("NavBar unclicked");
-
   const [displayMenuButton, setDisplayMenuButton] = useState(true);
 
+  // Actualizar valor de la variable sideMenuState
+  const updateSideMenu = () => {
+    setSideMenuState(!sideMenuState);
+  };  
+
+  // Actualizar las clases de SASS para el el NavBar principal
   const updateMenuButton = () => {
     setDisplayMenuButton(!displayMenuButton);
     if (displayMenuButton === true) {
@@ -79,6 +85,7 @@ function Nav() {
           </Link>
         </div>
       </div>
+      {/* Importar componente menú lateral */}
       <SideMenu menuState={sideMenuState} />
     </>
   );

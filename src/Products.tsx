@@ -1,10 +1,16 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 13/02/23
+// Fecha modificación: 14/02/23
+
+// Importaciones
 import React from "react";
 import "./components/css/Products.sass";
 import Filter from "./components/Filter";
 import SideFilter from "./components/SideFilter";
 
 function Products() {
+
+  // Conjunto de imagenes estáticas de productos a mostrar
   const img = [
     {
       name: "Polera Al Pacino",

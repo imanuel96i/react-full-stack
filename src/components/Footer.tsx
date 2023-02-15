@@ -1,4 +1,8 @@
-import React from "react";
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 08/02/23
+// Fecha modificación: 14/02/23
+
+// Importacionesimport React from "react";
 import "./css/Footer.sass";
 import {
   AiFillFacebook,

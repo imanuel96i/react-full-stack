@@ -1,3 +1,8 @@
+// Autores: Manuel Vidal, Benjamín Álvarez, Ignacio Korenhof
+// Fecha creación: 14/02/23
+// Fecha modificación: 14/02/23
+
+// Importaciones
 import React from 'react'
 
 function Error() {
